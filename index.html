@@ -27,7 +27,7 @@
             font-weight: bold;
             margin-bottom: 5px;
             color: #333;
-            text-align: right; /* הוספת יישור לימין כאן */
+            text-align: right;
         }
         input[type="text"] {
             width: calc(100% - 20px);
@@ -44,8 +44,8 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            display: block; /* הוספת display: block */
-            margin: 0 auto; /* מרכוז הכפתור */
+            display: block;
+            margin: 0 auto;
         }
         button:hover {
             background-color: #005fa3;
@@ -58,7 +58,7 @@
         }
         .link-container {
             margin-top: 20px;
-            text-align: center; /* להחזיר את המרכוז לקישורים */
+            text-align: center;
         }
         .link-row {
             display: flex;
@@ -91,8 +91,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            display: inline-block; /* לשנות חזרה ל-inline-block עבור כפתורי ההעתקה */
-            margin: 0; /* להסיר את ה-margin auto */
+            display: inline-block;
+            margin: 0;
         }
         .link-content button:hover {
             background-color: #005fa3;
@@ -104,7 +104,7 @@
     <div class="container">
         <h1>מחולל קישורי ניווט</h1>
         <div class="input-group">
-            <div class="input-title">הזינו את הכתובת הרצויה:</div>
+            <div class="input-title">הזינו את הכתובת הרצויה</div>
             <input type="text" id="addressInput" placeholder="הזינו כתובת">
         </div>
         <button onclick="generateLinks()">יצירת קישורים</button>
