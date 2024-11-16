@@ -18,7 +18,16 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            /* הסרת text-align מכאן */
+        }
+        .input-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: right; /* הוספת יישור לימין כאן */
         }
         input[type="text"] {
             width: calc(100% - 20px);
@@ -35,6 +44,8 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            display: block; /* הוספת display: block */
+            margin: 0 auto; /* מרכוז הכפתור */
         }
         button:hover {
             background-color: #005fa3;
@@ -47,6 +58,7 @@
         }
         .link-container {
             margin-top: 20px;
+            text-align: center; /* להחזיר את המרכוז לקישורים */
         }
         .link-row {
             display: flex;
@@ -79,6 +91,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: inline-block; /* לשנות חזרה ל-inline-block עבור כפתורי ההעתקה */
+            margin: 0; /* להסיר את ה-margin auto */
         }
         .link-content button:hover {
             background-color: #005fa3;
@@ -89,7 +103,10 @@
 <body>
     <div class="container">
         <h1>מחולל קישורי ניווט</h1>
-        <input type="text" id="addressInput" placeholder="הזינו כתובת">
+        <div class="input-group">
+            <div class="input-title">הזינו את הכתובת הרצויה:</div>
+            <input type="text" id="addressInput" placeholder="הזינו כתובת">
+        </div>
         <button onclick="generateLinks()">יצירת קישורים</button>
         <div id="map"></div>
         <div class="link-container" id="linkContainer"></div>
@@ -157,28 +174,28 @@
                             <div class="link-title">קישור ל-Waze</div>
                             <div class="link-content">
                                 <input type="text" id="wazeLink" value="${wazeLink}" readonly>
-                                <button onclick="copyToClipboard('wazeLink')">העתק</button>
+                                <button onclick="copyToClipboard('wazeLink')">העתקה</button>
                             </div>
                         </div>
                         <div class="link-row">
                             <div class="link-title">קישור למפות Google</div>
                             <div class="link-content">
                                 <input type="text" id="googleMapsLink" value="${googleMapsLink}" readonly>
-                                <button onclick="copyToClipboard('googleMapsLink')">העתק</button>
+                                <button onclick="copyToClipboard('googleMapsLink')">העתקה</button>
                             </div>
                         </div>
                         <div class="link-row">
                             <div class="link-title">קישור למפות Apple</div>
                             <div class="link-content">
                                 <input type="text" id="appleMapsLink" value="${appleMapsLink}" readonly>
-                                <button onclick="copyToClipboard('appleMapsLink')">העתק</button>
+                                <button onclick="copyToClipboard('appleMapsLink')">העתקה</button>
                             </div>
                         </div>
                         <div class="link-row">
                             <div class="link-title">קישור למפות Bing</div>
                             <div class="link-content">
                                 <input type="text" id="bingMapsLink" value="${bingMapsLink}" readonly>
-                                <button onclick="copyToClipboard('bingMapsLink')">העתק</button>
+                                <button onclick="copyToClipboard('bingMapsLink')">העתקה</button>
                             </div>
                         </div>
                     `;
